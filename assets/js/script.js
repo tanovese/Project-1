@@ -50,6 +50,10 @@ function getStyle() {
   return document.getElementById("style").value;
 }
 
+function getZoom() {
+  return parseInt(document.getElementById("zoom").value);
+}
+
 function getDateString() {
   return dayjs().format("YYYY-MM-DD");
 }
