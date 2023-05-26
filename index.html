@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="ie=edge" />
     <title>Project-1</title>
-    <link rel="stylesheet" href="style.css" /></link>
+    <link rel="stylesheet" href="assets/css/style.css" /></link>
 </head>
 <body>
     <header>Our Dashboard</header>
+
+    <main>
+        <label for="city-search">Enter location name:</label>
+        <input type="text" id="city-search">
+
+        <label for="city-search">Enter location name:</label>
+        <select name="star-chart-style" id="style">
+            <option value="default">Black</option>
+            <option value="inverted">White</option>
+            <option value="red">Red (Black Background)</option>
+            <option value="navy">Navy</option>
+        </select>
+        <button onclick="fetchData()">Show Chart</button>
+    </main>
+
+    <img src="" alt="Star chart" id="star-chart">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
@@ -16,6 +33,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
