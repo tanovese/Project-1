@@ -12,25 +12,37 @@
 
     <main>
         <form action="">
-            <label for="city-search">Enter location name:</label>
-            <input type="text" id="city-search">
-
-            <label for="zoom">Zoom: </label>
-            <input type="number" min="1" value="2" id="zoom" name="zoom">
-
-            <label for="style">Style:</label>
-            <select name="style" id="style">
-                <option value="default">Black</option>
-                <option value="inverted">White</option>
-                <option value="red">Red (Black Background)</option>
-                <option value="navy">Navy</option>
-            </select>
-            <button onclick="fetchData()">Show Chart</button>
+            <div>
+                <label for="city-search">Enter location name:</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <p>OR</p>
+            <div>
+                <div>Enter coordinates:</div>
+                <label for="latitude">Latitude: </label>
+                <input type="text" name="latitude" id="latitude">
+                <label for="longitude">Longitude: </label>
+                <input type="text" name="longitude" id="longitude">
+            </div>
+            <div>
+                <label for="zoom">Zoom: </label>
+                <input type="number" min="1" value="2" id="zoom" name="zoom">
+            </div>
+            <div>
+                <label for="style">Style:</label>
+                <select name="style" id="style">
+                    <option value="default">Black</option>
+                    <option value="inverted">White</option>
+                    <option value="red">Red (Black Background)</option>
+                    <option value="navy">Navy</option>
+                </select>
+            </div>
+            <button>Show Chart</button>
         </form>
         
     </main>
 
-    <img src="" alt="Star chart" id="star-chart">
+    <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" alt="Star chart" id="star-chart">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
