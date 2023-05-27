@@ -11,20 +11,23 @@
     <header>Our Dashboard</header>
 
     <main>
-        <label for="city-search">Enter location name:</label>
-        <input type="text" id="city-search">
+        <form action="">
+            <label for="city-search">Enter location name:</label>
+            <input type="text" id="city-search">
 
             <label for="zoom">Zoom: </label>
             <input type="number" min="1" value="2" id="zoom" name="zoom">
 
-        <label for="style">Style:</label>
-        <select name="star-chart-style" id="style">
-            <option value="default">Black</option>
-            <option value="inverted">White</option>
-            <option value="red">Red (Black Background)</option>
-            <option value="navy">Navy</option>
-        </select>
-        <button onclick="fetchData()">Show Chart</button>
+            <label for="style">Style:</label>
+            <select name="style" id="style">
+                <option value="default">Black</option>
+                <option value="inverted">White</option>
+                <option value="red">Red (Black Background)</option>
+                <option value="navy">Navy</option>
+            </select>
+            <button onclick="fetchData()">Show Chart</button>
+        </form>
+        
     </main>
 
     <img src="" alt="Star chart" id="star-chart">
