@@ -1,5 +1,6 @@
 var lat = 40.735657;
 var lon = -74.172364;
+var start;
 
 async function fetchData() {
   const applicationId = "2783890d-6a79-4a53-85ea-a093142ad152";
@@ -28,20 +29,22 @@ async function fetchData() {
                       "declination": 0
                   }
               },
-              "zoom": 3 //optional
+              "zoom": getZoom()
           }
       }
       })
   };
-
+  console.log(options);
   const url = "https://api.astronomyapi.com/api/v2/studio/star-chart";
+  start = new Date();
+  console.log('timer started');
   await fetch(url, options)
     .then((response) => response.json())
     .then((responseData) => displayStarChart(responseData.data));
 }
 
 function displayStarChart(data) {
-    console.log(data);
+    console.log((new Date() - start)/1000);
     console.log(data.imageUrl);
     document.getElementById("star-chart").src = data.imageUrl;
 }
