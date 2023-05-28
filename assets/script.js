@@ -20,14 +20,13 @@ function searchLocation() {
     var cityToFetch = `${cityEncodedVal},`;
     var stateInput = document.getElementById("locationState");
     var stateValue = stateInput.value;
-    var stateValToFetch = `${stateValue},`
     var countryInput = document.getElementById("countrySelect");
     var countryValue = countryInput.value;
 
     getStateString(stateValue);
 
     valueToFetchWeather = `${cityToFetch}${stateString}${countryValue}`
-    console.log(cityEncodedVal, stateValToFetch, countryValue, valueToFetchWeather);
+    console.log(cityEncodedVal, countryValue, valueToFetchWeather);
 
     getWeatherAndMaps(valueToFetchWeather);
 }
@@ -56,7 +55,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${valueToFetchWeather}&
             {
                 attribution: '',
                 filter: [
-                    'brightness:5%',
+                    'brightness:80%',
                     'contrast:100%',
                     'saturate:100%',
                     'hue:270deg',
