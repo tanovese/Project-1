@@ -1,0 +1,75 @@
+body {
+    background-color: gainsboro;
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#dashboard-title {
+    color: navy;
+}
+
+#star-chart-container {
+    display: flex;
+    justify-content: center;
+}
+
+#location-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#style-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#style {
+
+}
+
+.options {
+
+}
+
+#star-chart-button {
+    background-color: navy;
+    color: gainsboro;
+    cursor: pointer;
+}
+
+#city-search {
+}
+
+#star-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+#star-chart {
+    padding: 20px;
+}
+
+#weather-form {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#weather-search {
+
+}
+
+#weather-button {
+    padding: 5px;
+    background-color: navy;
+    color: gainsboro;
+    cursor: pointer;
+}
+
+/* #moon-phase {
+
+} */

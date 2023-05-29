@@ -3,35 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport"/>
-    <title>myStars</title>
-    <link rel="stylesheet" href="./assets/style.css"/></link>
+    <meta name="viewport" content="ie=edge" />
+    <title>Project-1</title>
+    <link rel="stylesheet" href="assets/css/style.css"/></link>
+    <script src="https://widgets.astronomyapi.com/cdn/astronomy-api-widgets.js"></script>
 </head>
+
 <body>
+
     <header id="header-container">
-        <h3 id="dashboard-title">User Dashboard</h3>
+        <h1 id="dashboard-title">Our Dashboard</h1>
     </header>
 
-    <section>
-        <h3 id="form-title">Get your location</h3>
-        <form id="form-container">
-            <input type="search" id="search-bar"
-            name="search-bar-name" placeholder="Search">
-            <button id="get-stars-button">Get Stars</button>
-        </form>
+    <main>
+        <section id="star-chart-container">
+                <label id="location-title" for="city-search">Enter location name:</label>
+                <input type="text" id="city-search">
+
+                <label id="style-title" for="style">Style:</label>
+                <select name="star-chart-style" id="style">
+                    <option value="default" class="options">Black</option>
+                    <option value="inverted" class="options">White</option>
+                    <option value="red" class="options">Red (Black Background)</option>
+                    <option value="navy" class="options">Navy</option>
+                </select>
+                <button onclick="fetchData()" id="star-chart-button">Show Chart</button>
+        </section>
+
+        <section>
+            <form id="weather-form"> 
+                <input type="search" id="weather-search" name="q" placeholder="Search...">
+                <button id="weather-button">Get Weather</button>
+            </form>
+
+            <div id="weather-card">
+                <h3>Visibility</h3>
+
+            </div>
+        </section>
+
+    </main>
+
+    <section id="star-image-container">
+        <img src="" alt="Star Chart" id="star-chart" height="500" width="550">
     </section>
 
-    <section id="visibility-container">
-        <h3 id="visibility-title">Visbility</h3>
-        <p>User Visbility Info</p>
-    </section>
-
-    <section>
-        <h3>Star Chart</h3>
-        <img id="star-chart"></img>
-    </section>
-
-
+    <div id="moon-phase"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
@@ -40,6 +57,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <script src="./assets/script.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>
