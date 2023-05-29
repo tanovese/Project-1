@@ -1,6 +1,24 @@
-var lat = 40.735657;
-var lon = -74.172364;
-var start;
+var startTime;
+
+var inputs = {
+  city: '',
+  latitude: 40.735657,
+  longitude: -74.172363,
+  zoom: 1,
+  style: 'default'
+}
+
+if(location.search !== '') {
+  var searchString = location.search + '&';
+  for(var i in inputs) {
+    const inputString = i + '=';
+    const startIndex = searchString.indexOf(inputString)+inputString.length
+    const ampIndex = searchString.indexOf('&');
+    inputs[i] = searchString.slice(startIndex, ampIndex);
+    searchString = searchString.slice(ampIndex+1);
+    console.log(i, inputs[i]);
+  }
+}
 
 async function fetchData() {
   const applicationId = "2783890d-6a79-4a53-85ea-a093142ad152";
@@ -36,7 +54,7 @@ async function fetchData() {
   };
   console.log(options);
   const url = "https://api.astronomyapi.com/api/v2/studio/star-chart";
-  start = new Date();
+  startTime = new Date();
   console.log('timer started');
   await fetch(url, options)
     .then((response) => response.json())
@@ -44,16 +62,16 @@ async function fetchData() {
 }
 
 function displayStarChart(data) {
-    console.log((new Date() - start)/1000);
+    console.log((new Date() - startTime)/1000);
     console.log(data.imageUrl);
     document.getElementById("star-chart").src = data.imageUrl;
 }
 
-function getStyle() {
+function getStyle(searchString) {
   return document.getElementById("style").value;
 }
 
-function getZoom() {
+function getZoom(searchString) {
   return parseInt(document.getElementById("zoom").value);
 }
 
