@@ -40,7 +40,9 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${valueToFetchWeather}&
     .then(response => response.json())
     .then(data => {
         // Extract the coordinates of the location
-        const { lat, lon } = data.coord;
+  //      const { lat, lon } = data.coord;
+        lat = data.coord.lat;
+        lon = data.coord.lon;
         console.log(data);
         console.log(lat, lon);
         // Create a Leaflet map centered on the location
