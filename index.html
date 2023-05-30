@@ -30,25 +30,28 @@
                 <button onclick="fetchData()" id="star-chart-button">Show Chart</button>
         </section>
 
-        <section>
-            <form id="weather-form"> 
-                <input type="search" id="weather-search" name="q" placeholder="Search...">
-                <button id="weather-button">Get Weather</button>
-            </form>
+        <section id="star-image-container">
+            <img src="" alt="Star Chart" id="star-chart" height="500" width="550">
+        </section>
+        
+        <section id="moon-phase-container">
+            <section>
+                <button onclick="getMoon()" id="moon-button">Get Moon Phase</button>
+            </section>
 
-            <div id="weather-card">
-                <h3>Visibility</h3>
-
-            </div>
+            <section id="moon-image-container">
+                <img src="" alt="Moon Phase" id="moon-phase" height="400" width="350">
+            </section>
         </section>
 
+        <section id="weather-card">
+            <h3>Weather Data</h3>
+            <p>Precipitation</p>
+            <p>Visibility</p>
+        </section>
+        
     </main>
 
-    <section id="star-image-container">
-        <img src="" alt="Star Chart" id="star-chart" height="500" width="550">
-    </section>
-
-    <div id="moon-phase"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
