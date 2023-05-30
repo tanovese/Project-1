@@ -28,6 +28,43 @@ if(location.search !== '') {
     inputs[i] = searchString.slice(startIndex, ampIndex);
     searchString = searchString.slice(ampIndex+1);
     console.log(i, inputs[i]);
+    document.getElementById(i).value = inputs[i];
+  }
+
+  // convert input from string to int
+  inputs.zoom = parseInt(inputs.zoom);
+  if(inputs.latitude === '' || inputs.longitude === '') {
+
+    locationToCoordinates(formatLocationString());
+  }
+  else {
+    inputs.latitude = parseFloat(inputs.latitude);
+    inputs.longitude = parseFloat(inputs.longitude);
+    displayMap(inputs.latitude, inputs.longitude);
+  }
+}
+
+function formatLocationString() {
+  var locationString = '';
+  if(inputs.city !== '')
+    locationString += inputs.city + ',';
+  if(inputs.state !== '')
+    locationString += inputs.state + ',';
+  if(inputs.country !== '')
+    locationString += inputs.city;
+  return locationString;
+}
+
+async function locationToCoordinates(locationString) {
+  await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationString}&appid=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      inputs.latitude = data.coord.lat;
+      inputs.longitude = data.coord.lon;
+      displayMap(inputs.latitude, inputs.longitude);
+    })
+    .catch(error => console.log(error));
   }
 }
 
