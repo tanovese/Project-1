@@ -13,7 +13,7 @@ var inputs = {
   date: today,
 }
 
-const dateInput = document.getElementById('date-input');
+const dateInput = document.getElementById('date');
 dateInput.value = today;
 dateInput.min = today;
 dateInput.max = dayjs().add(16, 'days').format("YYYY-MM-DD");
