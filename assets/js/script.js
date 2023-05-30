@@ -1,18 +1,23 @@
 var startTime;
+var today = dayjs().format('YYYY-MM-DD');
+document.getElementById('date-input').value = today;
 
 var inputs = {
   city: '',
-  latitude: 40.735657,
-  longitude: -74.172363,
+  state: '',
+  country: '',
+  latitude: '',
+  longitude: '',
   zoom: 1,
-  style: 'default'
+  style: 'default',
+  date: today,
 }
 
 if(location.search !== '') {
   var searchString = location.search + '&';
   for(var i in inputs) {
     const inputString = i + '=';
-    const startIndex = searchString.indexOf(inputString)+inputString.length
+    const startIndex = searchString.indexOf(inputString)+inputString.length;
     const ampIndex = searchString.indexOf('&');
     inputs[i] = searchString.slice(startIndex, ampIndex);
     searchString = searchString.slice(ampIndex+1);
