@@ -65,7 +65,7 @@ async function locationToCoordinates(locationString) {
       displayMap(inputs.latitude, inputs.longitude);
     })
     .catch(error => console.log(error));
-  }
+}
 
 function displayMap(lat, lon) {
   console.log(lat, lon);
@@ -134,7 +134,7 @@ async function fetchStarChart() {
       }
       })
   };
-  console.log(options);
+  console.log(options.body);
   const url = "https://api.astronomyapi.com/api/v2/studio/star-chart";
   startTime = new Date();
   console.log('timer started');
@@ -144,7 +144,8 @@ async function fetchStarChart() {
 }
 
 function displayStarChart(data) {
-    console.log((new Date() - startTime)/1000);
+    console.log((new Date() - startTime)/1000); // display time to load chart
+    console.log(data);
     console.log(data.imageUrl);
     document.getElementById("star-chart").src = data.imageUrl;
 }
