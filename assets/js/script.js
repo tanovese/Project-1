@@ -13,6 +13,12 @@ var inputs = {
   date: today,
 }
 
+const dateInput = document.getElementById('date-input');
+dateInput.value = today;
+dateInput.min = today;
+dateInput.max = dayjs().add(16, 'days').format("YYYY-MM-DD");
+
+
 if(location.search !== '') {
   var searchString = location.search + '&';
   for(var i in inputs) {
