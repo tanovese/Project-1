@@ -1,6 +1,6 @@
 var startTime;
 var today = dayjs().format('YYYY-MM-DD');
-document.getElementById('date-input').value = today;
+const apiKey = 'c65a83f1b41423a44ca059c4924fe1cd';
 
 var inputs = {
   city: '',
