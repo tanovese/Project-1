@@ -2,12 +2,14 @@
 <html>
 
 <head>
-    <title>Weather Map</title>
+    <title>Stargazing Info</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/style.css" /></link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-
-<head>
-
+</head>
 <body>
     <header>
         <h1>Our Dashboard</h1>
@@ -16,6 +18,7 @@
     <main>
         <div>
             <div>
+        <form action="">
                 <input id="locationCity" type="text" name="city" placeholder="Enter a city">
                 <select name="state" id="locationState">
                     <option value="">Choose a State (if applicable)</option>
@@ -329,21 +332,32 @@
                     <option value='AX'>Åland Islands</option>
                 </select>
                 <!-- <button id="searchLocation">Search</button> -->
-
+            <p>OR</p>
+            <div>
+                <div>Enter coordinates:</div>
+                <label for="latitude">Latitude: </label>
+                <input type="text" name="latitude" id="latitude">
+                <label for="longitude">Longitude: </label>
+                <input type="text" name="longitude" id="longitude">
+            </div>
+            <div>
+                <label for="zoom">Zoom: </label>
+                <input type="number" min="1" value="2" id="zoom" name="zoom">
+            </div>
+            <div>
                 <label for="style">Style:</label>
-                <select name="star-chart-style" id="style">
+                <select name="style" id="style">
                     <option value="default">Black</option>
                     <option value="inverted">White</option>
                     <option value="red">Red (Black Background)</option>
                     <option value="navy">Navy</option>
                 </select>
-                <button onclick="fetchData()">Show Chart</button>
             </div>
-            <div id="map" style="height: 400px;"></div>
-        </div>
+            <button>Show Chart</button>
+        </form>
+        <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" alt="Star chart" id="star-chart">
     </main>
 
-    <img src="" alt="Star chart" id="star-chart">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
