@@ -37,11 +37,11 @@ async function fetchData() {
       Authorization: `Basic ${authString}`,
     },
     body: JSON.stringify({
-      "style": getStyle(),
+      "style": inputs.style,
       "observer": {
-          "latitude": lat,
-          "longitude": lon,
-          "date": getDateString()
+          "latitude": inputs.latitude,
+          "longitude": inputs.longitude,
+          "date": inputs.date
       },
       "view": {
           "type": "area",
@@ -52,7 +52,7 @@ async function fetchData() {
                       "declination": 0
                   }
               },
-              "zoom": getZoom()
+              "zoom": inputs.zoom
           }
       }
       })
