@@ -14,8 +14,8 @@
     </header>
 
     <main>
-        <div style="display: flex;flex-direction: column;width: 100%;">
-            <div style="margin-bottom: 30px;">
+        <div>
+            <div>
                 <input id="locationCity" type="text" name="city" placeholder="Enter a city">
                 <select name="state" id="locationState">
                     <option value="">Choose a State (if applicable)</option>
@@ -328,17 +328,17 @@
                     <option value='ZW'>Zimbabwe</option>
                     <option value='AX'>Åland Islands</option>
                 </select>
-                <button id="searchLocation">Search</button>
+                <!-- <button id="searchLocation">Search</button> -->
 
-            <label for="style">Style:</label>
-            <select name="star-chart-style" id="style">
-                <option value="default">Black</option>
-                <option value="inverted">White</option>
-                <option value="red">Red (Black Background)</option>
-                <option value="navy">Navy</option>
-            </select>
+                <label for="style">Style:</label>
+                <select name="star-chart-style" id="style">
+                    <option value="default">Black</option>
+                    <option value="inverted">White</option>
+                    <option value="red">Red (Black Background)</option>
+                    <option value="navy">Navy</option>
+                </select>
+                <button onclick="fetchData()">Show Chart</button>
             </div>
-            <button onclick="fetchData()">Show Chart</button>
             <div id="map" style="height: 400px;"></div>
         </div>
     </main>
