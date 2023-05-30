@@ -71,15 +71,3 @@ function displayStarChart(data) {
     console.log(data.imageUrl);
     document.getElementById("star-chart").src = data.imageUrl;
 }
-
-function getStyle(searchString) {
-  return document.getElementById("style").value;
-}
-
-function getZoom(searchString) {
-  return parseInt(document.getElementById("zoom").value);
-}
-
-function getDateString() {
-  return dayjs().format("YYYY-MM-DD");
-}
