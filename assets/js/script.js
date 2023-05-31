@@ -69,14 +69,14 @@ async function locationToCoordinates(locationString) {
 
 function displayMap(lat, lon) {
   console.log(lat, lon);
-  // Create a Leaflet map centered on the location
+  // Create a map centered on the location --Leaflet.js
   const map = L.map('map').setView([lat, lon], 12);
   // Add a tile layer to the map 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
   maxZoom: 18,
   }).addTo(map);
-  // Add a tile layer for the cloud layer 
+  // Add a tile layer for the cloud layer --openweatherapi
   var cloudLayer = L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${apiKey}`,
   {
     attribution: '',
@@ -87,17 +87,15 @@ function displayMap(lat, lon) {
       'hue:270deg',
       'sepia:100%',
       'opacity:1.0'
-    ],
-    palette: {
-    }
+    ]
   }
   ).addTo(map);
-  // Add tile layer for precipitation   
+  // Add tile layer for precipitation --openweatherapi   
   var precipitationLayer = L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
   opacity: 1,
   attribution: '<a href="https://openweathermap.org/">OpenWeatherMap</a>',
   }).addTo(map);
-  // Add a marker to the map at the location
+  // Add a marker to the map at the location --Leaflet.js
   L.marker([lat, lon]).addTo(map);
   fetchStarChart();
 }

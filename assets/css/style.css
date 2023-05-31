@@ -1,3 +1,28 @@
 #map {
     height: 400px; /* map needs to have height defined in order to render */
 }
+.weatherMoon {
+    display: flex;
+    flex-direction: row;
+}
+.mooncurrentweather {
+    display: flex;
+    flex-direction: column;
+    width: 30%; 
+}
+.weather-card {
+    height: 250px;
+    background-color: blue;
+}
+.moonphase {
+    height: 250px;
+    background-color:blueviolet;
+}
+.star-chart {
+    width: 100%;
+    background-color: black;
+}
+img#star-chart {
+    width: 600px;
+    margin: auto;
+}
