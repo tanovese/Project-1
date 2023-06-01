@@ -5,17 +5,17 @@ This project is designed to assist a stargazer in determining if a specific loca
 No installation required.  The web application can be reached by navigating in the browser to: 
 
 ## Usage
-As a stargazer, I am able to select a city from which to view the stars  
-So that I can see what stars or constellations are visible from that location  
+As a stargazer, so that I can see what stars or constellations are visible from that location
+I am able to select a city from which to view the stars    
 And I am presented with a starmap of the night sky.
 
-As a stargazer, when I am viewing the star map  
-I would like to view different perspectives of the night sky,  
-And I am presented with the option to change the starmap view.  
+As a stargazer, when I am viewing the star map I would like to view different perspectives of the night sky,  
+So I am able to change the data in the style and zoom inputs, and click the submit button 
+And I am presented with a map that reflects those updated values.  
 
-As a stargazer, when I am planning on viewing the night sky,  
+As a stargazer, when I am planning on viewing the night sky, 
 I want to be able to determine if tonight is a good night to view the stars,  
-And I am presented with a map of the current clouds and precipitation.  
+So I am presented with a map of the current clouds and precipitation
 
 As a stargazer, when I am planning on viewing the night sky,  
 I want to be able to plan what time I can set aside for viewing  
@@ -26,8 +26,8 @@ I want to be sure the light of the moon does not obstruct my view
 And I am presented with the current moon phase.  
 
 As a stargazer, I want to be able to be comfortable when viewing the stars,  
-So I want to be able to determine what clothing I will need to wear  
-And I will be presented with a weather summary.  
+So I am able to determine what clothing I will need to wear   
+I will be presented with a weather summary.  
 
 
 ## Visual Description
