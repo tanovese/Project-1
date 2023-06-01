@@ -7,16 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/assets/css/style.css" />
     </link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://widgets.astronomyapi.com/cdn/astronomy-api-widgets.js"></script>
 </head>
 
 <body>
-    <div class="nav">
-        <h1>Stargazing</h1>
-    </div>
-    <header>
+
+    <header id="header-container">
+        <h1 id="dashboard-title">
+            <h1>Our Dashboard</h1>
+        </h1>
     </header>
 
     <main>
@@ -361,6 +363,26 @@
             </div>
             <button>Show Chart</button>
         </form>
+        <div id="map"></div>
+        <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+            alt="Star chart" id="star-chart">
+
+        <section id="moon-phase-container">
+            <section>
+                <button onclick="getMoon()" id="moon-button">Get Moon Phase</button>
+            </section>
+
+            <section id="moon-image-container">
+                <img src="" alt="Moon Phase" id="moon-phase" height="400" width="350">
+            </section>
+        </section>
+
+        <section id="weather-card">
+            <h3>Weather Data</h3>
+            <p>Precipitation</p>
+            <p>Visibility</p>
+        </section>
+
         <section>
             <div class="starmap-div">
                 <div class="star-inputs">
