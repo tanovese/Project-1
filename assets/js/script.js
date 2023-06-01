@@ -87,9 +87,7 @@ function displayMap(lat, lon) {
       'hue:270deg',
       'sepia:100%',
       'opacity:1.0'
-    ],
-    palette: {
-    }
+    ]
   }
   ).addTo(map);
   // Add tile layer for precipitation   
