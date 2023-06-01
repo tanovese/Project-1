@@ -115,6 +115,27 @@ function convertEpoch() {
   console.log(sunsetHours + ':' + sunsetMinutes + ' PM');
 }
 
+// 8 day forecast. need to repeat for string
+function getForecast() {
+  fetch("https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=minutely,hourly&units=imperial&appid=c65a83f1b41423a44ca059c4924fe1cd")
+
+  .then((response) => response.json())
+    // .then((data) => console.log(data.daily[0]))
+    .then((data) => this.displayForecast(data.daily[0]));
+}
+
+function displayForecast(data) {
+let date = new Date(data.dt * 1000)
+let simpleDate = date.toISOString().split('T')[0]
+let icon = data.weather[0].icon;
+let main = data.weather[0].main;
+let maxTemp = data.temp.max;
+let minTemp = data.temp.min;
+console.log(simpleDate, icon, main, maxTemp, minTemp)
+// forecast img link from api
+// 'https://openweathermap.org/img/wn/${icon}@2x.png'
+}
+
 
 
 function displayMap(lat, lon) {
