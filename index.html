@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-    <link rel="stylesheet" href="assets/css/assets/css/style.css"/></link>
+    <link rel="stylesheet" href="assets/css/assets/css/style.css" />
+    </link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://widgets.astronomyapi.com/cdn/astronomy-api-widgets.js"></script>
 </head>
@@ -16,8 +17,8 @@
 
     <header id="header-container">
         <h1 id="dashboard-title">
-        <h1>Our Dashboard</h1>
-    </h1>
+            <h1>Our Dashboard</h1>
+        </h1>
     </header>
 
     <main>
@@ -82,7 +83,7 @@
                 <option value='WV'>West Virginia</option>
                 <option value='WI'>Wisconsin</option>
                 <option value='WY'>Wyoming</option>
-            </select>  
+            </select>
             <select name="country" id="country">
                 <option value="">Please choose a Country</option>
                 <option value='US'>United States of America (the)</option>
@@ -363,30 +364,9 @@
             <button>Show Chart</button>
         </form>
         <div id="map"></div>
-        <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" alt="Star chart" id="star-chart">
-    </main>
+        <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+            alt="Star chart" id="star-chart">
 
-
-
-    <main>
-        <section id="star-chart-container">
-                <label id="location-title" for="city-search">Enter location name:</label>
-                <input type="text" id="city-search">
-
-                <label id="style-title" for="style">Style:</label>
-                <select name="star-chart-style" id="style">
-                    <option value="default" class="options">Black</option>
-                    <option value="inverted" class="options">White</option>
-                    <option value="red" class="options">Red (Black Background)</option>
-                    <option value="navy" class="options">Navy</option>
-                </select>
-                <button onclick="fetchData()" id="star-chart-button">Show Chart</button>
-        </section>
-
-        <section id="star-image-container">
-            <img src="" alt="Star Chart" id="star-chart" height="500" width="550">
-        </section>
-        
         <section id="moon-phase-container">
             <section>
                 <button onclick="getMoon()" id="moon-button">Get Moon Phase</button>
@@ -402,17 +382,17 @@
             <p>Precipitation</p>
             <p>Visibility</p>
         </section>
-        
+
     </main>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"></script>
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
