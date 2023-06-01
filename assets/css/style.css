@@ -1,68 +1,98 @@
 :root {
     --mainaccent: #FFD700;
-    --headingcolor: teal;
-    --text:#f4f4f4;
-    --green:#00FF00;
+    --headingcolor: #1ABC9C ;
+    --text: #f4f4f4;
+    --green:#008080;
+    --electric-blue: #00FFFF;
+    --green1:#00FF00;
 }
+
 body {
     margin: 0;
     background-color: #0c181f;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
 }
-h1, h2, h3 {
- color: var(--headingcolor);   
+
+h1 {
+    margin: auto;
 }
+
+h1,
+h2,
+h3 {
+    color: var(--headingcolor);
+}
+
 .nav {
     height: 60px;
-    background-color: var(--mainaccent);
+    background-color: #000;
     width: 100%;
-}
-.footer {
-    height: 100px;
-    background-color:var(--green);
+    margin-bottom: 30px;
     text-align: center;
+    padding-top: 30px;
 }
+
+.footer {
+    height: 80px;
+    background-color: #000;
+    text-align: center;
+    color: #f4f4f4;
+    padding-top: 30px; 
+    margin-top: 30px;
+}
+
 hr {
     margin: 40px 0;
 }
+
 main {
     max-width: 1200px;
     margin: auto;
 }
+
 #map {
-    height: 400px; /* map needs to have height defined in order to render */
+    height: 400px;
+    /* map needs to have height defined in order to render */
     width: 850px;
+    margin-bottom: 20px;
 }
+
 .small-inputs {
     width: 30%;
 }
-.starmap-div{
-    display:flex;
+
+.starmap-div {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
 }
+
 .weathermoon-div {
-    display:flex;
+    display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
 }
-.lg-card > img {
+
+.lg-card img {
     width: 300px;
- }
+}
+
 .smallcards-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 .sm-card {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }
 *#star-map {
     filter: contrast(300%);
 }
-
