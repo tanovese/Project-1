@@ -70,7 +70,7 @@ async function locationToCoordinates(locationString) {
 function displayMap(lat, lon) {
   console.log(lat, lon);
   // Create a Leaflet map centered on the location
-  const map = L.map('map').setView([lat, lon], 12);
+  const map = L.map('map').setView([lat, lon], 9);
   // Add a tile layer to the map 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
