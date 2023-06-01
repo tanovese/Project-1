@@ -28,8 +28,8 @@ if(location.search !== '') {
     inputs[i] = searchString.slice(startIndex, ampIndex);
     searchString = searchString.slice(ampIndex+1);
     console.log(i, inputs[i]);
-    if(i === 'latitude' || i === 'longitude') {
-      inputs[i] = parseFloat(inputs[i])
+    if((i === 'latitude' || i === 'longitude') && inputs[i] !== '') {
+      inputs[i] = parseFloat(inputs[i]);
     }
 
   // convert input from string to int
