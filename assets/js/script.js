@@ -38,8 +38,20 @@ if(location.search !== '') {
     locationToCoordinates(formatLocationString());
   }
   else {
-    inputs.latitude = parseFloat(inputs.latitude);
-    inputs.longitude = parseFloat(inputs.longitude);
+    displayMap(inputs.latitude, inputs.longitude);
+  }
+  setLocalStorage();
+}
+else {
+  var localStorageInfo = localStorage.getItem('stargazing-info');
+  if(localStorageInfo !== null) {
+    inputs = JSON.parse(localStorageInfo);
+    
+    const dateDiff = dayjs(inputs.date).diff(dayjs(), 'days');
+    if(dateDiff < 0) {
+      inputs.date = today;
+      setLocalStorage();
+    }
     displayMap(inputs.latitude, inputs.longitude);
   }
   else {
