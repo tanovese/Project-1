@@ -1,39 +1,40 @@
 # My Stars Team Project
+This project is designed to assist a stargazer in determining if a specific location is amenable to viewing the stars.  Factors used in determining this are an image of the night sky including constellations (in black mode), the current weather and the moon phase. The stargazer interacts with the application by inputting their location and initial type of star map they'd like to see(?? or are we defaulting to black to start).  The star map variations are also selectable after the initial display to provide different views of the night sky. The weathermap can be zoomed out to obtain a bigger picture of weather forecast.   This project uses three APIs: the Astronomy API, OpenWeather API and Leaflet.js. 
 
 ## Installation
+No installation required.  The web application can be reached by navigating in the browser to: 
 
 ## Usage
-This web application .....  
-User Story for information to build usage section  
+As a stargazer, I am able to select a city from which to view the stars  
+So that I can see what stars or constellations are visible from that location  
+And I am presented with a starmap of the night sky.
 
-As a star-gazer, I want to be able to pick a city and state to travel to  
-So that I can see what stars or constellations are visible from that location
+As a stargazer, when I am viewing the star map  
+I would like to view different perspectives of the night sky,  
+And I am presented with the option to change the starmap view.  
 
-As a star-gazer, I want to be able to save that location  
-So that I can go back to it to help me decide where to go
+As a stargazer, when I am planning on viewing the night sky,  
+I want to be able to determine if tonight is a good night to view the stars,  
+And I am presented with a map of the current clouds and precipitation.  
 
-As a star-gazer, I want to be able to view the cloud cover status (see what the ratings are) and precipitation  
-So that I can decide if I will be able to see the stars or constellations from my location
+As a stargazer, when I am planning on viewing the night sky,  
+I want to be able to plan what time I can set aside for viewing  
+And I am presented with the sunset and moonrise times.  
 
-As a star-gazer, I want to see a description of the hourly weather  
-So that I can decide what hours in the evening will be best for viewing the stars or constellations
+As a stargazer, when I am planning on viewing the night sky,  
+I want to be sure the light of the moon does not obstruct my view  
+And I am presented with the current moon phase.  
 
-As a star-gazer, I want to be able to choose to view the entire star sky or a single constellation  
-So that I can better decide if this location is a good viewing location
-
-As a star-gazer, I want the ability to view the sky or a constellation at each hour  
-So that I can see where in the constellation or stars are in the night sky when I am viewing
-
-As a star-gazer, I want to be able to pick a constellation from a list and view that constellation  
-So that I can determine if and where I can see that constellation.
-
-As a user, I want to be able to view the night sky, and a specific constellation  
-So that I can get my bearings of the constellation
-
+As a stargazer, I want to be able to be comfortable when viewing the stars,  
+So I want to be able to determine what clothing I will need to wear  
+And I will be presented with a weather summary.  
 
 
 ## Visual Description
 
 ## Collaborators
+
+## References
+
 
 ## License

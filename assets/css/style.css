@@ -66,3 +66,7 @@ body {
     color: navy;
 }
 
+
+#map {
+    height: 400px; /* map needs to have height defined in order to render */
+}
