@@ -71,6 +71,10 @@ function loadInputs() {
   }
 }
 
+function setLocalStorage() {
+  localStorage.setItem('stargazing-info', JSON.stringify(inputs))
+}
+
 function formatLocationString() {
   var locationString = '';
   if(inputs.city !== '')
