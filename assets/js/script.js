@@ -9,13 +9,12 @@ var inputs = {
   country: '',
   latitude: '',
   longitude: '',
-  zoom: 1,
+  zoom: 3,
   style: 'default',
   date: today,
 }
 
 const dateInput = document.getElementById('date');
-dateInput.value = today;
 dateInput.min = today;
 dateInput.max = dayjs().add(16, 'days').format("YYYY-MM-DD");
 
@@ -32,11 +31,11 @@ if(location.search !== '') {
     if((i === 'latitude' || i === 'longitude') && inputs[i] !== '') {
       inputs[i] = parseFloat(inputs[i]);
     }
-
+  }
+  loadInputs();
   // convert input from string to int
   inputs.zoom = parseInt(inputs.zoom);
   if(inputs.latitude === '' || inputs.longitude === '') {
-
     locationToCoordinates(formatLocationString());
   }
   else {
@@ -54,13 +53,10 @@ else {
       inputs.date = today;
       setLocalStorage();
     }
+    loadInputs();
     displayMap(inputs.latitude, inputs.longitude);
   }
-  else {
-    dateInput.value = today;
-  }
 }
-loadInputs();
 
 function loadInputs() {
   for(var i in inputs) {
@@ -73,7 +69,7 @@ function loadInputs() {
 }
 
 function setLocalStorage() {
-  localStorage.setItem('stargazing-info', JSON.stringify(inputs))
+  localStorage.setItem('stargazing-info', JSON.stringify(inputs));
 }
 
 function formatLocationString() {
