@@ -149,3 +149,11 @@ function displayStarChart(data) {
     console.log(data.imageUrl);
     document.getElementById("star-chart").src = data.imageUrl;
 }
+
+function changePlustoSpace(inputString) {
+  while(inputString.indexOf('+') >= 0) {
+    var idx = inputString.indexOf('+');
+    inputString = inputString.slice(0,idx)+' '+inputString.slice(idx+1);
+  }
+  return inputString.trim();
+}
