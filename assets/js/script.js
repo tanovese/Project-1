@@ -56,6 +56,7 @@ function formatLocationString() {
 }
 
 async function locationToCoordinates(locationString) {
+  submitButton.disabled = true;
   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationString}&appid=${apiKey}`)
     .then(response => response.json())
     .then(data => {
@@ -141,6 +142,7 @@ async function fetchStarChart() {
   await fetch(url, options)
     .then((response) => response.json())
     .then((responseData) => displayStarChart(responseData.data));
+  submitButton.disabled = false;
 }
 
 function displayStarChart(data) {
