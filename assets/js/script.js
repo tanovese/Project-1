@@ -42,6 +42,20 @@ if(location.search !== '') {
     inputs.longitude = parseFloat(inputs.longitude);
     displayMap(inputs.latitude, inputs.longitude);
   }
+  else {
+    dateInput.value = today;
+  }
+}
+loadInputs();
+
+function loadInputs() {
+  for(var i in inputs) {
+    var elem = document.getElementById(i);
+    if(i === 'city')
+      elem.value = changePlustoSpace(inputs[i]);
+    else
+      elem.value = inputs[i];
+  }
 }
 
 function formatLocationString() {
