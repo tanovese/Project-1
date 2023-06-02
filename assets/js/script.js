@@ -171,6 +171,37 @@ async function fetchStarChartAndMoonPhase() {
   await fetch(starUrl, starOptions)
     .then((response) => response.json())
     .then((responseData) => displayStarChart(responseData.data));
+
+  const moonOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Basic ${authString}`,
+    },
+    body: JSON.stringify({
+      "format": "png",
+      "style": {
+          "moonStyle": "default",
+          "backgroundStyle": "stars",
+          "backgroundColor": "red",
+          "headingColor": "white",
+          "textColor": "white"
+      },
+      "observer": {
+          "latitude": inputs.latitude,
+          "longitude": inputs.longitude,
+          "date": inputs.date,
+      },
+      "view": {
+          "type": "portrait-simple",
+          "orientation": "south-up"
+      }
+    })
+  }
+  const moonUrl = url + "moon-phase";
+  await fetch(moonUrl, moonOptions)
+    .then((response) => response.json())
+    .then((responseData) => displayMoon(responseData.data));
   submitButton.disabled = false;
 }
 
@@ -179,6 +210,12 @@ function displayStarChart(data) {
     console.log(data);
     console.log(data.imageUrl);
     document.getElementById("star-chart").src = data.imageUrl;
+}
+
+function displayMoon(data) {
+  console.log(data);
+  console.log(data.imageUrl);
+  document.getElementById("moon-phase").src = data.imageUrl;
 }
 
 function changePlustoSpace(inputString) {
