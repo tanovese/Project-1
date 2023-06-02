@@ -77,12 +77,6 @@ main {
     font-weight: bold;
 }
 
-#star-chart-button {
-    background-color: navy;
-    color: gainsboro;
-    cursor: pointer;
-}
-
 #star-image-container {
     display: flex;
     justify-content: center;
@@ -95,18 +89,6 @@ main {
 #moon-phase-container {
     display: flex;
     justify-content: center;
-}
-
-#moon-button {
-    align-content: center;
-    background-color: navy;
-    color: gainsboro;
-    padding: 10px;
-    font-size: 16px;
-    margin: 5px;
-    font-weight: bold;
-    border-radius: 15px;
-    cursor: pointer;
 }
 
 #weather-card {
