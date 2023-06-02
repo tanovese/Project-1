@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Crimson+Text:ital@0;1&family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,400&family=Righteous&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://widgets.astronomyapi.com/cdn/astronomy-api-widgets.js"></script>
 </head>
 
 <body>
@@ -374,8 +375,60 @@
         <div id="map"></div>
         <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
             alt="Star chart" id="star-chart">
-    </main>
 
+        <section id="moon-phase-container">
+            <section>
+                <button onclick="getMoon()" id="moon-button">Get Moon Phase</button>
+            </section>
+
+            <section id="moon-image-container">
+                <img src="" alt="Moon Phase" id="moon-phase" height="400" width="350">
+            </section>
+        </section>
+
+        <section id="weather-card">
+            <h3>Weather Data</h3>
+            <p>Precipitation</p>
+            <p>Visibility</p>
+        </section>
+
+        <section>
+            <div class="starmap-div">
+                <div class="star-inputs">
+                    <img width="350"
+                        src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png">
+                </div>
+                <div class="starmap"> <img
+                        src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                        alt="Star chart" id="star-chart"></div>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Additional Information Text</h2>
+            <div class="weathermoon-div">
+                <div class="" id="map"></div>
+                <div class="largecards-div">
+                    <div class="lg-card">
+                        <img
+                            src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="smallcards-div">
+                <div id="sm-card"><img width="225" height="300" src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png"></div>
+                <div id="sm-card"><img width="225" height="300" src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png"></div>
+                <div id="sm-card"><img width="225" height="300" src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png"></div>
+                <div id="sm-card"><img width="225" height="300" src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png"></div>
+                <div id="sm-card"><img width="225" height="300" src="https://uploads-ssl.webflow.com/647819b8e4036df5eed52f84/6478c36e1f7099006baeaa1a_moon2.png"></div>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <p>&copy; 2023  &nbsp;A collaborative effort by Andre, Hannah, Tara, Maureen</p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
