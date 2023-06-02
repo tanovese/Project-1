@@ -162,3 +162,204 @@ main {
 *#star-map {
     filter: contrast(300%);
 }
+
+body {
+    background-color: #002244;
+    font-size: 20px;
+    font-family: 'Righteous';
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+}
+
+#header-title {
+    color: #0dba86;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+    width: auto;
+}
+
+#location-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#city-name {
+    color: #0dba86;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#city {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    margin: 5px;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#state {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    margin: 5px;
+    background-color: #0dba86;
+    color: white;
+    cursor: pointer;
+}
+
+#country {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    margin: 5px;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#or-container {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}
+
+#or {
+    font-weight: bold;
+    font-style: italic;
+    color: #0dba86;
+}
+
+#coordinates-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    flex-direction: row;
+}
+
+#lat {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#latitude {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#lon-label {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#longitude {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#zoom-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#zoom-title {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#zoom {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#style-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#style-title {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#style {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    background-color: #0dba86;
+}
+
+#date-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#date-label {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#date {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    background-color: #0dba86;
+}
+
+#button-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#show-charts-button {
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid whitesmoke;
+    background-color: #0dba86;
+    color: whitesmoke;
+    cursor: pointer;
+    font-family: 'Righteous';
+}
+
+#show-charts-button:hover {
+    background-color: white;
+    color: #0dba86;
+    border: 3px solid #0dba86;
+}
