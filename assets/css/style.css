@@ -345,3 +345,11 @@ body {
     color: #0dba86;
     border: 3px solid #0dba86;
 }
+
+#show-charts-button:disabled {
+    filter: grayscale(0.8);
+}
+
+#show-charts-button:hover:disabled {
+    filter: grayscale(0.8);
+}
