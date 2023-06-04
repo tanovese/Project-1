@@ -1,7 +1,8 @@
 var startTime;
 var today = dayjs().format('YYYY-MM-DD');
 const apiKey = 'c65a83f1b41423a44ca059c4924fe1cd';
-var submitButton = document.getElementById('show-charts-button');
+const submitButton = document.getElementById('show-charts-button');
+const starChartEL = document.getElementById('star-chart');
 
 var inputs = {
   city: '',
