@@ -119,13 +119,13 @@ main {
     width: 68%;
     margin-bottom: 20px;
     margin-right: 20px;
-    border: 1px solid var(--headingcolor);
+    /*border: 1px solid var(--headingcolor);*/
 }
 
 .all-inputs {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .location-inputs,
@@ -194,7 +194,7 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-image: url("stars1.png");
+    background-image: url("cardbackgrounds1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
@@ -227,7 +227,7 @@ main {
 }
 
 .largecards-div {
-    background-image: url("stars1.png");
+    background-image: url("cardbackgrounds1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
@@ -356,4 +356,9 @@ button {
     #moon-phase {
         width: 100%;
     }
+}
+@media screen and (max-width: 600px) {
+  input#longitude{
+    margin-top: 10px;
+  }
 }

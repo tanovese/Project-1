@@ -97,14 +97,14 @@ async function locationToCoordinates(locationString) {
 
 function displayMap(lat, lon) {
   console.log(lat, lon);
-  // Create a Leaflet map centered on the location
+    // Create a Leaflet map centered on the location
   const map = L.map('map').setView([lat, lon], 9);
   // Add a tile layer to the map 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     maxZoom: 18,
   }).addTo(map);
-  // Add a tile layer for the cloud layer 
+   // Add a tile layer for the cloud layer 
   var cloudLayer = L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${apiKey}`,
     {
       attribution: '',
@@ -247,7 +247,6 @@ function makeCurrentWeatherCard() {
   var currWeatherTemp = Math.round(forecastData.list[0].main.temp);
   var currWeatherLow = Math.round(forecastData.list[0].main.temp_min);
   var currWeatherHigh = Math.round(forecastData.list[0].main.temp_max);
-  console.log(currWeatherDate, sunrise, sunset, currWeatherHumidity, currWeatherWind, currWeatherTemp, currWeatherHigh, currWeatherLow, currWeatherDesc);
   var lgWeatherTitleEl = document.createElement("h2");
   var lgWeatherIconEl = document.createElement("img");
   var lgWeatherTempEl = document.createElement("p");
@@ -290,7 +289,6 @@ function makeCurrentWeatherCard() {
 }
 
 function getWeatherDays() {
-  console.log(forecastData, forecastData.list, typeof forecastData.list);
   var forecastObj = forecastData.list;
   weatherDays = [];
   for (i = 0; i < (forecastObj).length; i++) {
@@ -299,7 +297,7 @@ function getWeatherDays() {
     var textArray = fullTextDate.split(" ");
     var dayDate = textArray[0];
     var dayHours = textArray[1];
-    if (dayHours === '00:00:00') {
+    if (dayHours === '21:00:00') {
       weatherDays.push(forecastObj[i]);
       console.log(weatherDays, dayDate, dayHours)
     }
@@ -310,7 +308,7 @@ function getWeatherDays() {
 function makeForecastCards() {
   var smallWeatherCard = document.getElementById('smallWeatherCards');
   for (i = 0; i < weatherDays.length; i++) {
-    var smallWeatherDate = dayjs((weatherDays[i].dt) * 1000).format('MM/DD/YYYY');
+    var smallWeatherDate = dayjs(((weatherDays[i].dt) * 1000)+12960).format('MM/DD/YYYY'); //9pm date-time second upd +1 day(86400)- 20 hrs(72000) - 4 hrs utc adj(14400)
     var smallWeatherIcon = weatherDays[i].weather[0].icon;
     var smallWeatherDesc = weatherDays[i].weather[0].description;
     var smallWeatherHumidity = weatherDays[i].main.humidity;
@@ -347,3 +345,5 @@ function makeForecastCards() {
     smallWeatherDivEl.setAttribute("class", "sm-card");
   }
 }
+
+
