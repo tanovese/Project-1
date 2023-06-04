@@ -1,5 +1,538 @@
 :root {
     --mainaccent: #FFD700;
+    --headingcolor: #1ABC9C;
+    --text: #f4f4f4;
+    --green: #008080;
+    --electric-blue: #00FFFF;
+    --green1: #00FF00;
+}
+
+body {
+    margin: 0;
+    background-color: #0c181f;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color: var(--text);
+}
+
+h1 {
+    margin: auto;
+    font-family: 'Righteous', Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+    color: var(--headingcolor);
+}
+
+form>label {
+    font-size: 14px;
+}
+
+input,
+select {
+    border-radius: 16px;
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: slategrey;
+    border-color: var(--headingcolor);
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+input {
+    width: 125px;
+}
+
+select {
+    width: 150px;
+}
+
+::placeholder {
+    color: var(--text);
+}
+
+:-ms-input-placeholder {
+    color: var(--text);
+}
+
+::-ms-input-placeholder {
+    color: var(--text);
+}
+
+input[type="date"] {
+    color: var(--text);
+}
+
+.nav {
+    height: 60px;
+    background-color: #000;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom:20px;
+    align-items: center;
+    font-size: 26px;
+}
+
+.footer {
+    height: 80px;
+    background-color: #000;
+    text-align: center;
+    color: #f4f4f4;
+    padding-top: 30px;
+    margin-top: 220px;
+}
+
+hr {
+    margin: 40px 0;
+}
+
+main {
+    max-width: 1230px;
+    margin: auto;
+}
+
+.divider {
+    margin: 10px 0;
+}
+
+options {
+    font-size: 14px;
+}
+
+#map {
+    height: 400px;
+    /* map needs to have height defined in order to render */
+    width: 68%;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid var(--headingcolor);
+}
+
+.all-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location-inputs,
+.starmap-inputs,
+.date-inputs {
+    justify-content: space-between;
+}
+
+.location-inputs,
+.starmap-inputs {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .city-state {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+.location-label {
+    text-align: center;
+}
+
+.city-state-inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.field-inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.starmap-inputs .field-inputs {
+    justify-content: space-around;
+}
+
+.or-text {
+    margin: 20px 0;
+}
+
+.starmap-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.weathermoon-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.smallcards-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sm-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-image: url("stars1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    padding: 10px 24px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 2px var(--headingcolor);
+    border: 1px solid #16161D;
+}
+
+.smallcards-div p {
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.smcard-subtitle {
+    margin-top: 3px;
+    font-variant: small-caps;
+    letter-spacing: .75px;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: var(--headingcolor);
+}
+
+#star-map {
+    filter: contrast(300%);
+}
+
+.card-icons {
+    width: 42px;
+}
+
+.largecards-div {
+    background-image: url("stars1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    padding: 8px 30px;
+    border-radius: 16px;
+    /*  box-shadow: 1px 1px 8px var(--headingcolor); */
+    box-shadow: 0px 0px 2px var(--headingcolor);
+    width: 25%;
+}
+
+.largecards-div p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.largecards-div h2 {
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.submitButton {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-radius: 16px;
+    padding: 8px 24px;
+    background-color: var(--headingcolor);
+    color: var(--text);
+    letter-spacing: .5px;
+    font-weight: bold;
+    border: 1px solid;
+
+}
+
+@media screen and (max-width: 1100px) {
+    .nav {
+        margin-bottom: 0px;
+    }
+
+    main {
+        padding: 10px 10px;
+        margin: auto;
+    }
+
+    .field-inputs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        margin: auto;
+
+    }
+
+    .all-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-label {
+        margin-top: 20px;
+    }
+
+    .or-text {
+        margin: 0
+    }
+
+    .location-inputs,
+    .starmap-inputs,
+    .date-inputs {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .starmap-inputs,
+    .date-inputs {
+        width: 40%;
+    }
+
+    #latitude,
+    #longitude {
+        margin: 0 10px;
+    }
+
+    .coordinates .field-inputs {
+        justify-content: center;
+        margin: 0 0;
+    }
+
+    .smallcards-div {
+        justify-content: none;
+
+    }
+
+    .starmap-inputs .field-inputs {
+        justify-content: space-around;
+        margin: 0 0;
+    }
+    .starmap-div {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+/* body {
+    background-color: #002244;
+    font-size: 20px;
+    font-family: 'Righteous';
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+}
+
+#header-title {
+    color: #0dba86;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+    width: auto;
+}
+
+#location-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#city-name {
+    color: #0dba86;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#city {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    margin: 5px;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#state {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    margin: 5px;
+    background-color: #0dba86;
+    color: white;
+    cursor: pointer;
+}
+
+#country {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    margin: 5px;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#or-container {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}
+
+#or {
+    font-weight: bold;
+    font-style: italic;
+    color: #0dba86;
+}
+
+#coordinates-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    flex-direction: row;
+}
+
+#lat {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#latitude {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#lon-label {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#longitude {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#zoom-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#zoom-title {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#zoom {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    background-color: #0dba86;
+    cursor: pointer;
+}
+
+#style-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#style-title {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#style {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    background-color: #0dba86;
+}
+
+#date-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#date-label {
+    font-weight: bold;
+    margin: 10px;
+    color: #0dba86;
+}
+
+#date {
+    border-radius: 15px;
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    background-color: #0dba86;
+}
+
+#button-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#show-charts-button {
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid whitesmoke;
+    background-color: #0dba86;
+    color: whitesmoke;
+    cursor: pointer;
+    font-family: 'Righteous';
+}
+
+#show-charts-button:hover {
+    background-color: white;
+    color: #0dba86;
+    border: 3px solid #0dba86;
+}
+
+/* :root {
+    --mainaccent: #FFD700;
     --headingcolor: #1ABC9C ;
     --text: #f4f4f4;
     --green:#008080;
@@ -120,7 +653,7 @@ main {
 #map {
     height: 400px;
     /* map needs to have height defined in order to render */
-    width: 850px;
+/*   width: 850px;
     margin-bottom: 20px;
 }
 
@@ -362,4 +895,4 @@ body {
     background-color: white;
     color: #0dba86;
     border: 3px solid #0dba86;
-}
+} */
