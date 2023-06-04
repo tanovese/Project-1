@@ -345,14 +345,14 @@
             <div id="coordinates-container">
                 <div id="enter-coordinates">
                 <label for="latitude" id="lat">Latitude</label>
-                <input type="text" name="latitude" id="latitude" placeholder="lat">
+                <input type="text" name="latitude" id="latitude">
                 <label for="longitude" id="lon-label">Longitude</label>
-                <input type="text" name="longitude" id="longitude"placeholder="lon">
+                <input type="text" name="longitude" id="longitude">
                 </div>
             </div>
             <div id="zoom-container">
                 <label for="zoom" id="zoom-title">Zoom</label>
-                <input type="number" min="1" value="2" id="zoom" name="zoom">
+                <input type="number" min="1" value="3" id="zoom" name="zoom">
             </div>
             <div id="style-container">
                 <label for="style" id="style-title">Style</label>
@@ -365,7 +365,7 @@
             </div>
             <div id="date-container">
                 <label for="date" id="date-label">Select date</label>
-                <input type="date" name="date" id="date">
+                <input type="date" name="date" id="date" required>
             </div>
             <section id="button-container">
                 <button id="show-charts-button">STARGAZE</button>
@@ -377,10 +377,6 @@
             alt="Star chart" id="star-chart">
 
         <section id="moon-phase-container">
-            <section>
-                <button onclick="getMoon()" id="moon-button">Get Moon Phase</button>
-            </section>
-
             <section id="moon-image-container">
                 <img src="" alt="Moon Phase" id="moon-phase" height="400" width="350">
             </section>
