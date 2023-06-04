@@ -133,6 +133,7 @@ function displayMap(lat, lon) {
 
 async function fetchStarChart() {
   document.getElementById("star-chart").src = "https://media.tenor.com/3SxZ7QeWmh0AAAAC/spinning-star-star.gif"
+}
 
 async function fetchStarChartAndMoonPhase() {
   submitButton.disabled = true;
