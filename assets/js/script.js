@@ -192,7 +192,7 @@ async function fetchStarChartAndMoonPhase() {
       "observer": {
           "latitude": inputs.latitude,
           "longitude": inputs.longitude,
-          "date": inputs.date,
+          "date": inputs.date
       },
       "view": {
           "type": "portrait-simple",
@@ -208,10 +208,10 @@ async function fetchStarChartAndMoonPhase() {
 }
 
 function displayStarChart(data) {
-    console.log((new Date() - startTime)/1000); // display time to load chart
-    console.log(data);
-    console.log(data.imageUrl);
-    document.getElementById("star-chart").src = data.imageUrl;
+  console.log((new Date() - startTime)/1000); // display time to load chart
+  console.log(data);
+  console.log(data.imageUrl);
+  starChartEL.src = data.imageUrl;
 }
 
 function displayMoon(data) {
