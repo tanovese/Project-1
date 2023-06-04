@@ -55,7 +55,12 @@ else {
       setLocalStorage();
     }
     loadInputs();
-    displayMap(inputs.latitude, inputs.longitude);
+    if(inputs.latitude === '' || inputs.longitude === '') {
+      locationToCoordinates(formatLocationString());
+    }
+    else {
+      displayMap(inputs.latitude, inputs.longitude);
+    }
   }
 }
 
