@@ -88,7 +88,6 @@ input[ype="date"] {
     text-align: center;
     color: #f4f4f4;
     padding-top: 30px;
-    margin-top: 220px;
 }
 
 hr {
@@ -407,6 +406,13 @@ button {
     #moon-phase {
         width: 100%;
         margin-top: 30px;
+    }
+    .nav{
+        padding: auto;
+        margin: auto 
+    }
+    h1 {
+       font-size: 3.5vh; 
     }
 }
 
