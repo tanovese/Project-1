@@ -12,9 +12,6 @@ The star map variations are also selectable after the initial display to provide
 
 This project uses three APIs: the Astronomy API, OpenWeather API and Leaflet.js. 
 
-## Installation
-
-N/A
 
 ## Usage
 
@@ -55,7 +52,3 @@ Link: https://tanovese.github.io/ohMyStars/
 ## Collaborators
 
 This application was completed by Andre Demonteverede, Hannah Rajarao, Maureen Maher and Tara Genovese.
-
-## License
-
-N/A
