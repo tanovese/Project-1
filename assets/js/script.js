@@ -138,10 +138,9 @@ function displayMap(lat, lon) {
   }).addTo(map);
   // Add a marker to the map at the location
   L.marker([lat, lon]).addTo(map);
-  fetchStarChart();
 }
 
-async function fetchStarChart() {
+function fetchStarChart() {
   submitButton.disabled = true;
 
   const starOptions = {
@@ -176,13 +175,13 @@ async function fetchStarChart() {
   startTime = new Date();
   console.log('timer started');
   starChartEL.src = "assets/images/star-loading.gif";
-  await fetch(starUrl, starOptions)
+  fetch(starUrl, starOptions)
     .then((response) => response.json())
     .then((responseData) => displayStarChart(responseData.data))
     .catch(error => console.log(error));;
 }
 
-async function fetchMoonPhase() {
+function fetchMoonPhase() {
   const moonOptions = {
     method: 'POST',
     headers: {
@@ -211,7 +210,7 @@ async function fetchMoonPhase() {
   }
   const moonUrl = url + "moon-phase";
   moonPhaseEl.src = "assets/images/moon-loading.gif";
-  await fetch(moonUrl, moonOptions)
+  fetch(moonUrl, moonOptions)
     .then((response) => response.json())
     .then((responseData) => displayMoon(responseData.data))
     .catch(error => console.log(error));
