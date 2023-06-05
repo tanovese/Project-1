@@ -203,7 +203,7 @@ async function fetchStarChartAndMoonPhase() {
   await fetch(moonUrl, moonOptions)
     .then((response) => response.json())
     .then((responseData) => displayMoon(responseData.data));
-  //  submitButton.disabled = false;
+   submitButton.disabled = false;
 }
 
 function displayStarChart(data) {
