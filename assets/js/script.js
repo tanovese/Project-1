@@ -145,7 +145,7 @@ async function fetchStarChartAndMoonPhase() {
       Authorization: `Basic ${authString}`,
     },
     body: JSON.stringify({
-      "style": inputs.style,
+      "style": "default",
       "observer": {
         "latitude": inputs.latitude,
         "longitude": inputs.longitude,
@@ -160,7 +160,7 @@ async function fetchStarChartAndMoonPhase() {
               "declination": 0
             }
           },
-          "zoom": inputs.zoom
+          "zoom": 4
         }
       }
     })
