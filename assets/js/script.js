@@ -36,7 +36,6 @@ if (location.search !== '') {
     }
   }
   loadInputs();
-  setLocalStorage();
 }
 else {
   var localStorageInfo = localStorage.getItem('stargazing-info');
@@ -46,12 +45,11 @@ else {
     const dateDiff = dayjs(inputs.date).diff(dayjs(), 'days');
     if (dateDiff < 0) {
       inputs.date = today;
-      setLocalStorage();
     }
     loadInputs();
   }
 }
-
+setLocalStorage();
 if(inputs.latitude === '' || inputs.longitude === '') {
   locationToCoordinates(formatLocationString());
 }
