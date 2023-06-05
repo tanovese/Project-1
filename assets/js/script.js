@@ -31,8 +31,6 @@ if (location.search !== '') {
     }
   }
   loadInputs();
-  // convert input from string to int
-  inputs.zoom = parseInt(inputs.zoom);
   if (inputs.latitude === '' || inputs.longitude === '') {
     locationToCoordinates(formatLocationString());
   }
