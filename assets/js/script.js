@@ -40,7 +40,7 @@ if (location.search !== '') {
     locationToCoordinates(formatLocationString());
   }
   else {
-    displayMap(inputs.latitude, inputs.longitude);
+    loadWeatherAndCharts();
   }
   setLocalStorage();
 }
@@ -59,7 +59,7 @@ else {
       locationToCoordinates(formatLocationString());
     }
     else {
-      displayMap(inputs.latitude, inputs.longitude);
+      loadWeatherAndCharts();
     }
   }
 }
@@ -96,10 +96,16 @@ async function locationToCoordinates(locationString) {
       console.log(data);
       inputs.latitude = data[0].lat;
       inputs.longitude = data[0].lon;
-      displayMap(inputs.latitude, inputs.longitude);
-      getFiveDayForecast(inputs.latitude, inputs.longitude);
+      loadWeatherAndCharts();
     })
     .catch(error => console.log(error));
+}
+
+function loadWeatherAndCharts() {
+  displayMap(inputs.latitude, inputs.longitude);
+  getFiveDayForecast(inputs.latitude, inputs.longitude);
+  fetchStarChart();
+  fetchMoonPhase();
 }
 
 function displayMap(lat, lon) {
