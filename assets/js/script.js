@@ -169,7 +169,7 @@ async function fetchStarChartAndMoonPhase() {
   const starUrl = url + 'star-chart';
   startTime = new Date();
   console.log('timer started');
-  starChartEL.src = "assets/images/star-loading.gif";
+  //starChartEL.src = "assets/images/star-loading.gif";
   await fetch(starUrl, starOptions)
     .then((response) => response.json())
     .then((responseData) => displayStarChart(responseData.data));
@@ -201,7 +201,7 @@ async function fetchStarChartAndMoonPhase() {
     })
   }
   const moonUrl = url + "moon-phase";
-  moonPhaseEl.src = "assets/images/moon-loading.gif";
+  //moonPhaseEl.src = "assets/images/moon-loading.gif";
   await fetch(moonUrl, moonOptions)
     .then((response) => response.json())
     .then((responseData) => displayMoon(responseData.data));
@@ -313,7 +313,8 @@ function getWeatherDays() {
 function makeForecastCards() {
   var smallWeatherCard = document.getElementById('smallWeatherCards');
   for (i = 0; i < weatherDays.length; i++) {
-    var smallWeatherDate = dayjs(((weatherDays[i].dt) * 1000)+12960).format('MM/DD/YYYY'); //9pm date-time second upd +1 day(86400)- 20 hrs(72000) - 4 hrs utc adj(14400)
+
+    var smallWeatherDate = dayjs(((weatherDays[i].dt) +86400-14400)*1000).format('MM/DD/YYYY'); //9pm date-time second upd +1 day(86400)- 20 hrs(72000) - 4 hrs utc adj(14400)
     var smallWeatherIcon = weatherDays[i].weather[0].icon;
     var smallWeatherDesc = weatherDays[i].weather[0].description;
     var smallWeatherHumidity = weatherDays[i].main.humidity;
