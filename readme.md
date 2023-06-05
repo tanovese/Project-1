@@ -6,7 +6,7 @@ This project is designed to assist a stargazer in determining if a specific loca
 
 Factors used in determining this are an image of the night sky including constellations (in black mode), the current weather and the moon phase.
 
-The stargazer interacts with the application by inputting their location and initial type of star map they'd like to see(?? or are we defaulting to black to start).
+The stargazer interacts with the application by inputting their location and initial type of star map they'd like to see.
 
 The star map variations are also selectable after the initial display to provide different views of the night sky. The weathermap can be zoomed out to obtain a bigger picture of the weather forecast.
 
@@ -48,7 +48,7 @@ I will be presented with a weather summary.
 
 Screenshot: ![]()
 
-Link: 
+Link: https://tanovese.github.io/ohMyStars/
 
 ## Collaborators
 
