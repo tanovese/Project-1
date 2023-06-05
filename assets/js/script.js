@@ -76,11 +76,11 @@ function setLocalStorage() {
 function formatLocationString() {
   var locationString = '';
   if (inputs.city !== '')
-    locationString += inputs.city + ',';
-  if (inputs.state !== '')
-    locationString += inputs.state + ',';
-  if (inputs.country !== '')
     locationString += inputs.city;
+  if (inputs.state !== '')
+    locationString += ',' + inputs.state;
+  if (inputs.country !== '')
+    locationString += ',' + inputs.country;
   return locationString;
 }
 
