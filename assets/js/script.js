@@ -36,12 +36,6 @@ if (location.search !== '') {
     }
   }
   loadInputs();
-  if (inputs.latitude === '' || inputs.longitude === '') {
-    locationToCoordinates(formatLocationString());
-  }
-  else {
-    loadWeatherAndCharts();
-  }
   setLocalStorage();
 }
 else {
@@ -55,13 +49,14 @@ else {
       setLocalStorage();
     }
     loadInputs();
-    if(inputs.latitude === '' || inputs.longitude === '') {
-      locationToCoordinates(formatLocationString());
-    }
-    else {
-      loadWeatherAndCharts();
-    }
   }
+}
+
+if(inputs.latitude === '' || inputs.longitude === '') {
+  locationToCoordinates(formatLocationString());
+}
+else {
+  loadWeatherAndCharts();
 }
 
 function loadInputs() {
