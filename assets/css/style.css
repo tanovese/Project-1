@@ -141,7 +141,7 @@ main {
     flex-direction: column;
     border-radius: 10px;
 }
-*#star-map {
+#star-map {
     filter: contrast(300%);
 }
 

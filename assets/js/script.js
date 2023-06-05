@@ -230,3 +230,4 @@ function changePlustoSpace(inputString) {
   }
   return inputString.trim();
 }
+}
