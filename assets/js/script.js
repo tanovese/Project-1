@@ -169,7 +169,7 @@ async function fetchStarChartAndMoonPhase() {
   const starUrl = url + 'star-chart';
   startTime = new Date();
   console.log('timer started');
-  //starChartEL.src = "assets/images/star-loading.gif";
+  starChartEL.src = "assets/images/star-loading.gif";
   await fetch(starUrl, starOptions)
     .then((response) => response.json())
     .then((responseData) => displayStarChart(responseData.data));
@@ -201,7 +201,7 @@ async function fetchStarChartAndMoonPhase() {
     })
   }
   const moonUrl = url + "moon-phase";
-  //moonPhaseEl.src = "assets/images/moon-loading.gif";
+  moonPhaseEl.src = "assets/images/loadingmoon.gif";
   await fetch(moonUrl, moonOptions)
     .then((response) => response.json())
     .then((responseData) => displayMoon(responseData.data));
