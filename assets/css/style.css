@@ -194,7 +194,7 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    background-image: url("cardbackgrounds1.jpg");
+    background-image: url("../images/cardbackgrounds1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
@@ -227,7 +227,7 @@ main {
 }
 
 .largecards-div {
-    background-image: url("cardbackgrounds1.jpg");
+    background-image: url("../images/cardbackgrounds1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
