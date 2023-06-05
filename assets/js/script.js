@@ -10,8 +10,6 @@ var inputs = {
   country: '',
   latitude: '',
   longitude: '',
-  zoom: 3,
-  style: 'default',
   date: today,
 }
 
