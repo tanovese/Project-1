@@ -3,6 +3,7 @@ var today = dayjs().format('YYYY-MM-DD');
 const apiKey = 'c65a83f1b41423a44ca059c4924fe1cd';
 const submitButton = document.getElementById('show-charts-button');
 const starChartEL = document.getElementById('star-chart');
+const moonPhaseEl = document.getElementById('moon-phase');
 
 var inputs = {
   city: '',
@@ -200,6 +201,7 @@ async function fetchStarChartAndMoonPhase() {
     })
   }
   const moonUrl = url + "moon-phase";
+  moonPhaseEl.src = "assets/images/moon-loading.gif";
   await fetch(moonUrl, moonOptions)
     .then((response) => response.json())
     .then((responseData) => displayMoon(responseData.data));
@@ -216,7 +218,7 @@ function displayStarChart(data) {
 function displayMoon(data) {
   console.log(data);
   console.log(data.imageUrl);
-  document.getElementById("moon-phase").src = data.imageUrl;
+  moonPhaseEl.src = data.imageUrl;
 }
 
 function changePlustoSpace(inputString) {
