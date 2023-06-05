@@ -1,7 +1,8 @@
 var startTime;
 var today = dayjs().format('YYYY-MM-DD');
 const apiKey = 'c65a83f1b41423a44ca059c4924fe1cd';
-var submitButton = document.getElementById('show-charts-button');
+const submitButton = document.getElementById('show-charts-button');
+const starChartEL = document.getElementById('star-chart');
 
 var inputs = {
   city: '',
@@ -53,7 +54,12 @@ else {
       setLocalStorage();
     }
     loadInputs();
-    displayMap(inputs.latitude, inputs.longitude);
+    if(inputs.latitude === '' || inputs.longitude === '') {
+      locationToCoordinates(formatLocationString());
+    }
+    else {
+      displayMap(inputs.latitude, inputs.longitude);
+    }
   }
 }
 
@@ -129,7 +135,8 @@ function displayMap(lat, lon) {
 }
 
 async function fetchStarChartAndMoonPhase() {
-  //  submitButton.disabled = true;
+  submitButton.disabled = true;
+  starChartEL.src = "https://media.tenor.com/3SxZ7QeWmh0AAAAC/spinning-star-star.gif"
   const applicationId = "2783890d-6a79-4a53-85ea-a093142ad152";
   const applicationSecret = "31acc37032ad69c4d5f7928586e995f9f30116465cf5dbc9669b235b5d71362584d5ba854089cc09e823e2052b7d0b4d2a30ed06d6e1ca2bf2995fcfae759c8f8004d66ad88d304c3219be628bf106d4f2a6ccd2e52fa416d1d575ddeb9e87d9536f373b6af2e372b0f92e7a1f6478ed";
   const authString = btoa(`${applicationId}:${applicationSecret}`);
@@ -186,9 +193,9 @@ async function fetchStarChartAndMoonPhase() {
         "textColor": "white"
       },
       "observer": {
-        "latitude": inputs.latitude,
-        "longitude": inputs.longitude,
-        "date": inputs.date,
+          "latitude": inputs.latitude,
+          "longitude": inputs.longitude,
+          "date": inputs.date
       },
       "view": {
         "type": "portrait-simple",
@@ -204,10 +211,10 @@ async function fetchStarChartAndMoonPhase() {
 }
 
 function displayStarChart(data) {
-  console.log((new Date() - startTime) / 1000); // display time to load chart
+  console.log((new Date() - startTime)/1000); // display time to load chart
   console.log(data);
   console.log(data.imageUrl);
-  document.getElementById("star-chart").src = data.imageUrl;
+  starChartEL.src = data.imageUrl;
 }
 
 function displayMoon(data) {

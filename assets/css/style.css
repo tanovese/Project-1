@@ -267,6 +267,40 @@ button {
 
 }
 
+#button-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#show-charts-button {
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid whitesmoke;
+    background-color: #0dba86;
+    color: whitesmoke;
+    cursor: pointer;
+    font-family: 'Righteous';
+}
+
+#show-charts-button:hover {
+    background-color: white;
+    color: #0dba86;
+    border: 3px solid #0dba86;
+}
+
+#show-charts-button:disabled {
+    filter: grayscale(0.8);
+}
+
+#show-charts-button:hover:disabled {
+    filter: grayscale(0.8);
+}
+
+
 @media screen and (max-width: 1100px) {
     .nav {
         margin-bottom: 0px;
@@ -362,3 +396,4 @@ button {
     margin-top: 10px;
   }
 }
+

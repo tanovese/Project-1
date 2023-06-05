@@ -1,10 +1,25 @@
 # My Stars Team Project
-This project is designed to assist a stargazer in determining if a specific location is amenable to viewing the stars.  Factors used in determining this are an image of the night sky including constellations (in black mode), the current weather and the moon phase. The stargazer interacts with the application by inputting their location and initial type of star map they'd like to see(?? or are we defaulting to black to start).  The star map variations are also selectable after the initial display to provide different views of the night sky. The weathermap can be zoomed out to obtain a bigger picture of the weather forecast.   This project uses three APIs: the Astronomy API, OpenWeather API and Leaflet.js. 
+
+## Description
+
+This project is designed to assist a stargazer in determining if a specific location is amenable to viewing the stars.
+
+Factors used in determining this are an image of the night sky including constellations (in black mode), the current weather and the moon phase.
+
+The stargazer interacts with the application by inputting their location and initial type of star map they'd like to see.
+
+The star map variations are also selectable after the initial display to provide different views of the night sky. The weathermap can be zoomed out to obtain a bigger picture of the weather forecast.
+
+This project uses three APIs: the Astronomy API, OpenWeather API and Leaflet.js. 
 
 ## Installation
-No installation required.  The web application can be reached by navigating in the browser to: 
+
+N/A
 
 ## Usage
+
+User Story:
+
 As a stargazer, so that I can see what stars or constellations are visible from that location  
 I am able to select a city from which to view the stars    
 And I am presented with a starmap of the night sky.
@@ -29,12 +44,16 @@ As a stargazer, I want to be able to be comfortable when viewing the stars,
 So I am able to determine what clothing I will need to wear   
 I will be presented with a weather summary.  
 
+## Screenshot and Link to Application
 
-## Visual Description
+Screenshot: ![]()
+
+Link: https://tanovese.github.io/ohMyStars/
 
 ## Collaborators
 
-## References
-
+This application was completed by Andre Demonteverede, Hannah Rajarao, Maureen Maher and Tara Genovese.
 
 ## License
+
+N/A
