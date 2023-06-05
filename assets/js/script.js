@@ -76,11 +76,11 @@ function setLocalStorage() {
 function formatLocationString() {
   var locationString = '';
   if (inputs.city !== '')
-    locationString += inputs.city + ',';
-  if (inputs.state !== '')
-    locationString += inputs.state + ',';
-  if (inputs.country !== '')
     locationString += inputs.city;
+  if (inputs.state !== '')
+    locationString += ',' + inputs.state;
+  if (inputs.country !== '')
+    locationString += ',' + inputs.country;
   return locationString;
 }
 
@@ -203,7 +203,7 @@ async function fetchStarChartAndMoonPhase() {
   await fetch(moonUrl, moonOptions)
     .then((response) => response.json())
     .then((responseData) => displayMoon(responseData.data));
-  //  submitButton.disabled = false;
+   submitButton.disabled = false;
 }
 
 function displayStarChart(data) {
