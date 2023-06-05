@@ -85,12 +85,12 @@ function formatLocationString() {
 }
 
 async function locationToCoordinates(locationString) {
-  await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationString}&appid=${apiKey}`)
+  await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locationString}&appid=${apiKey}`)
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      inputs.latitude = data.coord.lat;
-      inputs.longitude = data.coord.lon;
+      inputs.latitude = data[0].lat;
+      inputs.longitude = data[0].lon;
       displayMap(inputs.latitude, inputs.longitude);
       getFiveDayForecast(inputs.latitude, inputs.longitude);
     })
