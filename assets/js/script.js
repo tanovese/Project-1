@@ -176,7 +176,9 @@ async function fetchStarChartAndMoonPhase() {
   starChartEL.src = "assets/images/star-loading.gif";
   await fetch(starUrl, starOptions)
     .then((response) => response.json())
-    .then((responseData) => displayStarChart(responseData.data));
+    .then((responseData) => displayStarChart(responseData.data))
+    .catch(error => console.log(error));;
+}
 
   const moonOptions = {
     method: 'POST',
@@ -208,7 +210,8 @@ async function fetchStarChartAndMoonPhase() {
   moonPhaseEl.src = "assets/images/moon-loading.gif";
   await fetch(moonUrl, moonOptions)
     .then((response) => response.json())
-    .then((responseData) => displayMoon(responseData.data));
+    .then((responseData) => displayMoon(responseData.data))
+    .catch(error => console.log(error));
    submitButton.disabled = false;
 }
 
